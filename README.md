@@ -17,6 +17,7 @@ To install the latest version of the package directly from github using the devt
 
 or
 
+      pak::pak("VoronDM/RPHAST")
 
       
       

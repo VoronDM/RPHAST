@@ -29,6 +29,11 @@ Last updated: 4/8/2010
 
 #include <Rdefines.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 SEXP rph_listOfLists_to_SEXP(ListOfLists *lol);
 
 SEXP rph_phyloP(SEXP modP, 

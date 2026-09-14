@@ -29,6 +29,11 @@ Last updated: 1/5/2010
 #include <Rdefines.h>
 #include <R_ext/Random.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 TreeNode* rph_tree_new(SEXP treeStr);
 subst_mod_type rph_get_subst_mod(SEXP mod);
 

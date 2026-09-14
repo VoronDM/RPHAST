@@ -29,6 +29,11 @@
 #include <R.h>
 #include <Rinternals.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 #ifdef COMPLEX
 #undef COMPLEX
 #endif

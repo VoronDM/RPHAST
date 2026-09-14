@@ -52,11 +52,11 @@ static int num_memlist=0;
 
 #ifdef RPHAST
 #undef malloc 
-#define malloc(x) (void*)Calloc((x),char)
+#define malloc(x) (void*)R_Calloc((x),char)
 #undef realloc
-#define realloc(x,n) (void*)Realloc((x),(n),char)
+#define realloc(x,n) (void*)R_Realloc((x),(n),char)
 #undef free
-#define free(x) Free((x))
+#define free(x) R_Free((x))
 #endif
 
 

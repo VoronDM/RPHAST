@@ -14,6 +14,10 @@ RPHAST is an R interface to the [PHAST](http://compgen.cshl.edu/phast/) software
 To install the latest version of the package directly from github using the devtools package, use the command in R:
 
       devtools::install_github("VoronDM/RPHAST")
+
+      or
+
+      
       
 The RPHAST package source code can be downloaded here - [rphast_1.6.11.tar.gz](http://compgen.cshl.edu/rphast/downloads/rphast_1.6.11.tar.gz)
 

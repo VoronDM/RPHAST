@@ -12,6 +12,8 @@
 #include <R.h>
 #include <Rinternals.h>
 
+#undef nrows
+#undef ncols
 
 typedef struct mem_list_type MemList;
 

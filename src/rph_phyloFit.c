@@ -70,7 +70,7 @@ SEXP rph_phyloFit(SEXP msaP,
   List *new_rate_weights = NULL;
 
   GetRNGstate(); //seed R's random number generator
-  pf = phyloFit_struct_new(1);  //sets appropriate defaults for RPHAST mode
+  pf = phyloFit_struct_new();  //sets appropriate defaults for RPHAST mode
 
   pf->msa = (MSA*)EXTPTR_PTR(msaP);
 

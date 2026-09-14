@@ -20,19 +20,7 @@ or
       pak::pak("VoronDM/RPHAST")
 
       
-      
-The RPHAST package source code can be downloaded here - [rphast_1.6.11.tar.gz](http://compgen.cshl.edu/rphast/downloads/rphast_1.6.11.tar.gz)
-
-RPHAST can be installed from source code using the command in R:
-      
-      install.packages("rphast_1.6.11.tar.gz", repos=NULL, type="source")
-      
-The package source can also be installed from the command line on non-Windows platforms using the command:
-
-      R CMD INSTALL rphast_1.6.tar.gz     
-
-*NOTE: If you do not have administrator privileges, you may need to specify a directory where the package will be stored. This can be done with the "library" argument to install.packages, or by using R CMD INSTALL --library=/path/to/library on the command line.
-
+  
 # Documentation
 
 

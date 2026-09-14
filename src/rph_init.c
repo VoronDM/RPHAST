@@ -13,6 +13,11 @@
 #include <Rdefines.h>
 #include <R_ext/Rdynload.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 SEXP rph_bgc_hmm(SEXP msaP, SEXP modP, SEXP foregroundP, SEXP doBgcP, SEXP bgcP, SEXP estimateBgcP, SEXP bgcExpectedLengthP, SEXP estimateBgcExpectedLengthP, SEXP bgcTargetCoverageP, SEXP estimateBgcTargetCoverageP, SEXP selP, SEXP consExpectedLengthP, SEXP consTargetCoverageP, SEXP estimateScaleP, SEXP postProbsP);
 SEXP rph_bgc_hmm_get_informative(SEXP msaP, SEXP modP, SEXP foregroundP);
 SEXP rph_cm_new_from_gff(SEXP gff);

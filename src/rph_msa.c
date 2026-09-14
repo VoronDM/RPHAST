@@ -38,6 +38,11 @@ Last updated: 12/14/08
 #include <Rdefines.h>
 #include <R_ext/Random.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 void rph_msa_free(SEXP msaP) {
   MSA *msa;
   msa = (MSA*)EXTPTR_PTR(msaP);

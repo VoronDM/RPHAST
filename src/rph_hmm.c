@@ -30,6 +30,10 @@ Last updated: 12/14/08
 #include <vector.h>
 #include <list_of_lists.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
 
 void rph_hmm_free(SEXP hmmP) {
   HMM *hmm = (HMM*)EXTPTR_PTR(hmmP);

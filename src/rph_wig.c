@@ -25,6 +25,11 @@ Last updated: 4/10/2012
 
 #include <Rdefines.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 
 SEXP rph_wig_read(SEXP filename) {
   FILE *infile = phast_fopen(CHARACTER_VALUE(filename), "r");

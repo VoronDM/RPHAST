@@ -30,6 +30,10 @@ Last updated: 10/27/2010
 #include <list_of_lists.h>
 #include <phylo_hmm.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
 
 void rph_phmm_free(SEXP phmmP) {
   PhyloHmm *phmm = (PhyloHmm*)EXTPTR_PTR(phmmP);

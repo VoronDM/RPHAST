@@ -27,6 +27,11 @@ Last updated: 1/5/2010
 #include <rph_util.h>
 #include <Rdefines.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 void rph_cm_free(SEXP cmP) {
   CategoryMap *cm = (CategoryMap*)EXTPTR_PTR(cmP);
   phast_unregister_protected(cm);

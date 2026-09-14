@@ -9,6 +9,10 @@
 
 #include <memory_handler.h>
 
+#include <R.h>
+#include <Rinternals.h>
+
+
 typedef struct mem_list_type MemList;
 
 struct protected_object_struct {

@@ -29,6 +29,11 @@ Last updated: 1/13/10
 #include <rph_util.h>
 #include <Rdefines.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 //these are defined as macros in R and we don't want them overriding
 // phast's matrix->nrows and matrix->ncols
 #undef nrows

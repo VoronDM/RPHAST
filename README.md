@@ -15,7 +15,8 @@ To install the latest version of the package directly from github using the devt
 
       devtools::install_github("VoronDM/RPHAST")
 
-      or
+or
+
 
       
       

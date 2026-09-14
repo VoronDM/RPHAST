@@ -410,7 +410,7 @@ void sfree(void *ptr0) {
     *(void**)ptr[0] = NULL;
   }
 #ifdef RPHAST
-  Free(ptr);
+  R_Free(ptr);
 #else
   free((void*)ptr);
 #endif

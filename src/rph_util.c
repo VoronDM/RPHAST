@@ -9,6 +9,11 @@
 
 #include <rph_util.h>
 
+/* Fix for R 4.0+ where EXTPTR_PTR was removed */
+#ifndef EXTPTR_PTR
+#define EXTPTR_PTR(x) R_ExternalPtrAddr(x)
+#endif
+
 SEXP rph_new_mem_handler() {
   phast_new_mem_handler();
   return R_NilValue;
